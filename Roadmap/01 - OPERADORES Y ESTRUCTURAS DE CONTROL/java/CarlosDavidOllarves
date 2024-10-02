@@ -1,0 +1,112 @@
+package mouredev;
+
+public class Operadores01 {
+
+	public static void main(String[] args) {
+		// operadores aritmeticos
+		
+		
+		int suma = 3 + 5;
+		int resta = 4 - 1;
+		int multiplicacion = 2 * 2;
+		int division = 15 / 3;
+		int modulo = 17 % 4;		
+		System.out.println("Operadores Aritmeticos");
+		System.out.println("Suma: " + suma);
+		System.out.println("Resta: " + resta);
+		System.out.println("Multiplicacion: " + multiplicacion);
+		System.out.println("Modulo: " + modulo);	
+		
+		//operadores logicos
+		boolean and = true && false;
+		boolean or = true || false;
+		boolean not = !true;
+		System.out.println("\nOperadores logicos:");
+		System.out.println("AND: "+ and);
+		System.out.println("OR: "+ or);
+		System.out.println("NOT "+ not);
+		
+		//operadores de comparacion
+		boolean mayor = 8 > 5;
+		boolean menor = 5 < 8;
+		boolean mayorIgual = 6 >= 6;
+		boolean menorIgual = 4 <= 4;
+		boolean igual = 9 == 9;
+		boolean distinto = 9 != 8;
+		System.out.println("\nOperadores de comparacion:");
+		System.out.println("Mayor: " + mayor);
+		System.out.println("Menor: " + menor);
+		System.out.println("Mayor o Igual: " + mayorIgual);
+		System.out.println("Menor o Igual: " + menorIgual);
+		System.out.println("Igual: " + igual);
+		System.out.println("Distinto: " + distinto);
+		
+		//operadores de asignacion
+		int x = 5;
+		x += 3; //x = x + 3
+		x -= 2; //x = x - 2
+		x *= 4; //x = x * 4
+		x /= 2; //x = x / 2
+		x %= 3; //x = x % 3
+		System.out.println("\nOperadores de asignacion: ");
+		System.out.println("Valor final de x: " + x);
+		
+		//operadores condicionales if-else
+		int edad = 25;
+		if (edad >= 18) {
+			System.out.println("\nEres mayor de edad.");			
+		} else {
+			System.out.println("\nEres menor de edad.");
+		}
+		
+		//estructura condicional switch
+		int dia = 3;
+		String diaSemana;
+		switch (dia) {
+		case 1:
+			diaSemana = "Lunes";
+			break;
+		case 2:
+			diaSemana = "Martes";
+			break;
+		case 3:
+			diaSemana = "Miercoles";
+			break;
+		default:
+			diaSemana = "Dia Invalido";
+			break;			
+		}
+		System.out.println("\nEl dia de la semana es: " + diaSemana);
+		
+		
+		//estructura iterativa for
+		System.out.println("\nNumeros del 1 al 5: ");
+		for (int i = 1; i <= 5; i++) {
+			System.out.println(i);
+		}
+		
+		//estructura iteractiva while
+		int contador = 0;
+		System.out.println("\nContado hasta 3:");
+		while (contador <3) {
+			System.out.println(contador);
+			contador++;
+		}
+		
+		//estructura de exepcion try-catch
+		try {
+			int division0 = 10 / 0;
+			System.out.println("\nEl resultado de la division es: "+ division0);			
+		} catch (ArithmeticException e) {
+			System.out.println("\nError: Division por cero");
+		}
+		
+		System.out.println("\nNumeros pares entre 10 y 55, excluyendo el 16 y multiplos de 3: ");
+		for (int i = 10; i < 55; i++) {
+			if (i % 2 == 0 && i!= 16 && i % 3 != 0) {
+				System.out.println(i);
+			}
+		}
+	}
+
+}
